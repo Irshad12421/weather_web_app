@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Register Form</title>
+    <link rel="stylesheet" href="login.css" />
+    <script type="module" src="firebase/register.js" defer></script>
+    <script type="module" src="firebase/login.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar">
+        <img class="logoclass" src="image/image.png" alt="Logo" />
+        <a id="logo">MyWeather</a>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links" id="nav-links">
+          <a class="nav" href="index.html">Home</a>
+          <a class="nav" href="about.html">About</a>
+          <a class="nav" href="Developer.html">Developer</a>
+          <a class="nav" href="login.html">Login</a>
+        </div>
+      </div>
+    <h1 id="form-title">Login</h1>
+    <div class="container">
+        <div id="login-form" class="form-container active">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" id="login-password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+            </div>
+            <button id="login-btn">Login</button>
+            <p class="switch" onclick="toggleForms()">Don't have an account? Register here.</p>
+        </div>
+        <div id="register-form" class="form-container">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" id="register-password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword('register-password')">👁️</span>
+            </div>
+            <button id="register-btn">Register</button>
+            <p class="switch" onclick="toggleForms()">Already have an account? Login here.</p>
+        </div>
+        
+    </div>
+    <div class="footer">&copy; 2025 Weather Forecast. All Rights Reserved.</div>
+    
+    <script>
+function toggleForms() {
+  let loginForm = document.getElementById("login-form");
+  let registerForm = document.getElementById("register-form");
+  let formTitle = document.getElementById("form-title");
+  
+  if (loginForm.classList.contains("active")) {
+      loginForm.classList.remove("active");
+      registerForm.classList.add("active");
+      formTitle.innerText = "Register";
+  } else {
+      registerForm.classList.remove("active");
+      loginForm.classList.add("active");
+      formTitle.innerText = "Login";
+  }
+}
+
+function togglePassword(fieldId) {
+  let passwordField = document.getElementById(fieldId);
+  passwordField.type = passwordField.type === "password" ? "text" : "password";
+}
+
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("active");
+}
+    </script>
+  </body>
+</html>

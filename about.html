@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Weather Forecast</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <div class="navbar">
+    <img class="logoclass" src="image/image.png" alt="Logo" />
+    <a id="logo">MyWeather</a>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a class="nav" href="index.html">Home</a>
+      <a class="nav" href="about.html">About</a>
+      <a class="nav" href="Developer.html">Developer</a>
+      <a class="nav" href="login.html">Login</a>
+    </div>
+  </div>
+  <h1>About us</h1>
+    <div class="container">
+        
+        <p>Welcome to our Weather Forecasting website! We provide accurate and real-time weather updates to help you plan your day effectively.</p>
+        <p>Our mission is to deliver reliable weather data using advanced meteorological technology.</p>
+        <p>Stay informed, stay safe!</p>
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-item">Real-time weather data from OpenWeatherMap API.</div>
+            <div class="feature-item">Displays temperature, wind speed, and humidity.</div>
+            <div class="feature-item">Provides a 5-day weather forecast based on predictive models.</div>
+            <div class="feature-item">User-friendly interface with easy-to-read weather information.</div>
+            <div class="feature-item">Severe weather alerts to keep you informed.</div>
+            <div class="feature-item">Supports multiple locations for weather tracking.</div>
+            <div class="feature-item">Historical weather data for analysis.</div>
+        </div>
+        <div class="footer">&copy; 2025 Weather Forecast. All Rights Reserved.</div>
+    </div>
+    <script>
+      function toggleMenu() {
+document.getElementById("nav-links").classList.toggle("active");
+}
+  </script>
+    
+</body>
+</html>
+

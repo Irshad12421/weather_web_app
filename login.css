@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-image: url("image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logoclass {
+  width: 35px;
+  margin: 11px -8px -4px 10px;
+}
+
+#logo {
+  cursor: auto;
+  font-size: 35px;
+  padding: 6px;
+  color: skyblue;
+}
+.navbar {
+  height: 60px;
+  background: gray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: gray;
+    padding: 10px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+
+h1 {
+  background: #5372f0;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 18px 0;
+  color: #fff;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  text-align: center;
+}
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #bbdefb;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid black;
+}
+
+.form-container {
+  display: none;
+}
+.active {
+  display: block;
+}
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.password-container {
+  position: relative;
+  width: 100%;
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #1565c0;
+}
+button {
+  background: #1565c0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+button:hover {
+  background: #0d47a1;
+}
+.switch {
+  margin-top: 20px;
+  cursor: pointer;
+  color: #1976d2;
+}
